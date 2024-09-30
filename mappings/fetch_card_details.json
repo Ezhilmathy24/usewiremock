@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/card-details",
+    "headers": {
+      "Authorization": {
+	  "equalTo" : "Bearer asdfglkjhqwertpoiuyzxcvmnb"
+	  }
+    }	
+  },
+  "response": {
+    "bodyFileName": "card-details.json",
+    "status": 200
+  }
+}
