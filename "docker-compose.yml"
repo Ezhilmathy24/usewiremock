@@ -1,0 +1,9 @@
+services:
+    wiremock:
+        container_name: sample_wiremock
+        image: wiremock/wiremock:latest
+        ports:
+            - 8090:8080
+        volumes:
+            - ./__files/:/home/wiremock/__files/
+            - ./mappings/:/home/wiremock/mappings/
