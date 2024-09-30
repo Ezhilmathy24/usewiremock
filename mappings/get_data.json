@@ -1,0 +1,29 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/get-deired-data",
+        "headers": {
+            "PREFIX-header1": {
+                "equalTo": "GET_DATA"
+            },
+            "PREFIX-UUIDheader": {
+                "matches": "^[a-fA-F0-9-]{36}$"
+            },
+            "timestamp-header": {
+                "after": "2024-09-05T10:20:00.000Z"
+            },
+            "dynamic-num-header": {
+                "matches": "^[0-9]{3,5}$"
+            }
+        },
+        "bodyPatterns": [
+            {
+                "matchesJsonPath": "$[?( @.id || @.booleanFileld || @.datas)]"
+            }
+        ]
+    },
+    "response": {
+        "bodyFileName": "data.json",
+        "status": 200
+    }
+}
