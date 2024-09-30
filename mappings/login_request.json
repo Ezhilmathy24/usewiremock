@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/login",
+    "bodyPatterns": [
+      {
+        "equalToJson": "{ \"userID\" : \"admin\",\"password\": \"12345pass\"}"
+      }
+    ]
+  },
+  "response": {
+    "body":"{ \"roles\": [\"Administrator\"]}",
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer asdfglkjhqwertpoiuyzxcvmnb"
+    },
+    "status": 200
+  }
+}
